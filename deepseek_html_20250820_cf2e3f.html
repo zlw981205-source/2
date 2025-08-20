@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首量医疗产品调研问卷</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #1a5fb4;
+        }
+        .header h1 {
+            color: #1a5fb4;
+            margin-bottom: 10px;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            color: #1a5fb4;
+            border-left: 4px solid #1a5fb4;
+            padding-left: 10px;
+            margin-top: 0;
+        }
+        .question {
+            margin-bottom: 25px;
+        }
+        .question-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .required:after {
+            content: " *";
+            color: red;
+        }
+        input[type="text"], 
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+        .options {
+            margin-top: 8px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+        .submit-btn {
+            background-color: #1a5fb4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #154a8c;
+        }
+        .note {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>首量医疗产品调研问卷</h1>
+        <p>尊敬的护理同仁：您好！我们是首量医疗，诚挚邀请您参与本次产品调研。本次调研旨在了解手术室护士对我们产品的熟悉度和认可度，您的反馈将帮助我们提供更优质的产品和服务。本次调研预计需要5-8分钟完成，所有数据仅用于内部研究，我们将严格保密您的个人信息。感谢您的支持！</p>
+    </div>
+
+    <form>
+        <div class="section">
+            <h2 class="section-title">基本信息</h2>
+            
+            <div class="question">
+                <div class="question-title required">1. 您的姓名</div>
+                <input type="text" name="name" required>
+            </div>
+            
+            <div class="question">
+                <div class="question-title required">2. 您的手机号码</div>
+                <input type="tel" name="phone" required pattern="[0-9]{11}" placeholder="请输入11位手机号码">
+            </div>
+            
+            <div class="question">
+                <div class="question-title required">3. 您所在的省份</div>
+                <select name="province" required>
+                    <option value="">请选择</option>
+                    <option value="北京">北京市</option>
+                    <option value="上海">上海市</option>
+                    <option value="广东">广东省</option>
+                    <option value="江苏">江苏省</option>
+                    <option value="浙江">浙江省</option>
+                    <option value="其他">其他省份</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <div class="question-title required">4. 您的单位全称</div>
+                <input type="text" name="hospital" required>
+            </div>
+            
+            <div class="question">
+                <div class="question-title required">5. 您的职称</div>
+                <div class="options">
+                    <label><input type="radio" name="title" value="主任护师" required> 主任护师</label>
+                    <label><input type="radio" name="title" value="副主任护师"> 副主任护师</label>
+                    <label><input type="radio" name="title" value="主管护师"> 主管护师</label>
+                    <label><input type="radio" name="title" value="护师"> 护师</label>
+                    <label><input type="radio" name="title" value="护士"> 护士</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-title required">6. 您的手术室工作年限</div>
+                <div class="options">
+                    <label><input type="radio" name="experience" value="5年以下" required> 5年以下</label>
+                    <label><input type="radio" name="experience" value="5-10年"> 5-10年</label>
+                    <label><input type="radio" name="experience" value="10-15年"> 10-15年</label>
+                    <label><input type="radio" name="experience" value="15年以上"> 15年以上</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">产品熟悉度与使用情况</h2>
+            
+            <div class="question">
+                <div class="question-title required">7. 您是否了解或使用过首量医疗的大血管闭合器械？</div>
+                <div class="options">
+                    <label><input type="radio" name="know_vasculaire" value="经常使用" required> 经常使用</label>
+                    <label><input type="radio" name="know_vasculaire" value="偶尔使用"> 偶尔使用</label>
+                    <label><input type="radio" name="know_vasculaire" value="了解但未使用"> 了解但未使用</label>
+                    <label><input type="radio" name="know_vasculaire" value="完全不了解"> 完全不了解</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-title">8. 与大血管闭合领域知名品牌（如美敦力Ligasure）相比，您认为首量产品的优势是？（可多选）</div>
+                <div class="options">
+                    <label><input type="checkbox" name="advantages" value="价格"> 价格优势</label>
+                    <label><input type="checkbox" name="advantages" value="性能"> 性能稳定</label>
+                    <label><input type="checkbox" name="advantages" value="操作"> 操作便捷</label>
+                    <label><input type="checkbox" name="advantages" value="安全性"> 安全性高</label>
+                    <label><input type="checkbox" name="advantages" value="效果"> 闭合效果佳</label>
+                    <label><input type="checkbox" name="advantages" value="其他"> 其他</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-title required">9. 您是否了解高频电刀耗材将纳入集采？</div>
+                <div class="options">
+                    <label><input type="radio" name="know_collection" value="非常了解" required> 非常了解</label>
+                    <label><input type="radio" name="know_collection" value="有所了解"> 有所了解</label>
+                    <label><input type="radio" name="know_collection" value="听说过但不清楚"> 听说过但不清楚</label>
+                    <label><input type="radio" name="know_collection" value="完全不知道"> 完全不知道</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-title required">10. 您使用过以下哪些高频电刀耗材？（可多选）</div>
+                <div class="options">
+                    <label><input type="checkbox" name="products_used" value="电刀笔"> 电刀笔</label>
+                    <label><input type="checkbox" name="products_used" value="多种类型刀头"> 多种类型刀头</label>
+                    <label><input type="checkbox" name="products_used" value="冲洗吸引电凝切割器"> 冲洗吸引电凝切割器</label>
+                    <label><input type="checkbox" name="products_used" value="一次性使用双极电凝镊"> 一次性使用双极电凝镊</label>
+                    <label><input type="checkbox" name="products_used" value="回路负极板"> 回路负极板</label>
+                    <label><input type="checkbox" name="products_used" value="其他"> 其他</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-title">11. 您认为集采背景下，高频电刀耗材哪方面的特性最为重要？</div>
+                <div class="options">
+                    <label><input type="radio" name="important_factor" value="价格"> 价格经济性</label>
+                    <label><input type="radio" name="important_factor" value="质量"> 产品质量稳定性</label>
+                    <label><input type="radio" name="important_factor" value="供应"> 供货稳定性</label>
+                    <label><input type="radio" name="important_factor" value="品牌"> 品牌信誉</label>
+                    <label><input type="radio" name="important_factor" value="服务"> 售后服务</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">产品认可度与需求</h2>
+            
+            <div class="question">
+                <div class="question-title required">12. 总体而言，您对首量医疗产品的满意度如何？</div>
+                <div class="options">
+                    <label><input type="radio" name="satisfaction" value="非常满意" required> 非常满意</label>
+                    <label><input type="radio" name="satisfaction" value="满意"> 满意</label>
+                    <label><input type="radio" name="satisfaction" value="一般"> 一般</label>
+                    <label><input type="radio" name="satisfaction" value="不满意"> 不满意</label>
+                    <label><input type="radio" name="satisfaction" value="从未使用"> 从未使用，无法评价</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-title required">13. 您是否会推荐同事使用首量医疗的产品？</div>
+                <div class="options">
+                    <label><input type="radio" name="recommend" value="一定会" required> 一定会</label>
+                    <label><input type="radio" name="recommend" value="可能会"> 可能会</label>
+                    <label><input type="radio" name="recommend" value="不确定"> 不确定</label>
+                    <label><input type="radio" name="recommend" value="可能不会"> 可能不会</label>
+                    <label><input type="radio" name="recommend" value="绝不会"> 绝不会</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-title">14. 您认为首量医疗产品在哪些方面需要改进？（可多选）</div>
+                <div class="options">
+                    <label><input type="checkbox" name="improvements" value="性能"> 产品性能</label>
+                    <label><input type="checkbox" name="improvements" value="设计"> 产品设计</label>
+                    <label><input type="checkbox" name="improvements" value="包装"> 包装标识</label>
+                    <label><input type="checkbox" name="improvements" value="培训"> 使用培训</label>
+                    <label><input type="checkbox" name="improvements" value="价格"> 价格体系</label>
+                    <label><input type="checkbox" name="improvements" value="其他"> 其他</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-title required">15. 考虑到集采带来的价格变化，您是否愿意尝试或增加使用首量医疗的高频电刀耗材？</div>
+                <div class="options">
+                    <label><input type="radio" name="willingness" value="非常愿意" required> 非常愿意</label>
+                    <label><input type="radio" name="willingness" value="比较愿意"> 比较愿意</label>
+                    <label><input type="radio" name="willingness" value="一般"> 一般</label>
+                    <label><input type="radio" name="willingness" value="不太愿意"> 不太愿意</label>
+                    <label><input type="radio" name="willingness" value="完全不愿意"> 完全不愿意</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-title">16. 您希望获得哪些类型的产品样品或进一步了解哪些产品？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="samples" value="8mm单极导线"> 8mm单极导线</label>
+                    <label><input type="checkbox" name="samples" value="4mm单极导线"> 4mm单极导线</label>
+                    <label><input type="checkbox" name="samples" value="单极转接头"> 单极转接头</label>
+                    <label><input type="checkbox" name="samples" value="方孔双极导线"> 方孔双极导线（欧标）</label>
+                    <label><input type="checkbox" name="samples" value="两圆孔双极导线"> 两圆孔双极导线（美标）</label>
+                    <label><input type="checkbox" name="samples" value="负极板导线（窄口）"> 负极板导线（窄口）</label>
+                    <label><input type="checkbox" name="samples" value="负极板导线（宽口）"> 负极板导线（宽口）</label>
+                    <label><input type="checkbox" name="samples" value="电刀笔"> 电刀笔</label>
+                    <label><input type="checkbox" name="samples" value="双极电凝镊"> 一次性使用双极电凝镊</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-title">17. 您对首量医疗产品或服务有其他意见或建议吗？</div>
+                <textarea name="suggestions" style="width: 100%; height: 80px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">提交问卷</button>
+    </form>
+</body>
+</html>
